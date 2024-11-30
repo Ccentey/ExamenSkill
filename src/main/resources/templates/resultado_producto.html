@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Registro de Producto</title>
+    <style>
+        /* Estilos básicos para el cuerpo */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Contenedor principal */
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 400px;
+            text-align: center;
+        }
+
+        /* Estilo para los encabezados */
+        h1 {
+            color: #333;
+        }
+
+        /* Estilo para los párrafos */
+        p {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        /* Estilo para las etiquetas */
+        strong {
+            color: #333;
+        }
+
+        /* Enlace de regreso */
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilo para las líneas de separación */
+        .separator {
+            margin: 20px 0;
+            height: 1px;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Resultado de Registro de Producto</h1>
+
+        <p><strong>Nombre del Producto:</strong> <span th:text="${producto.nombre}"></span></p>
+        <p><strong>Fecha de Caducidad:</strong> <span th:text="${producto.fechaCaducidad}"></span></p>
+        <p><strong>Stock Mínimo:</strong> <span th:text="${producto.stockMinimo}"></span></p>
+        <p><strong>Stock Máximo:</strong> <span th:text="${producto.stockMaximo}"></span></p>
+        <p><strong>Precio Unitario:</strong> <span th:text="${producto.precioUnitario}"></span></p>
+        <p><strong>Categoría:</strong> <span th:text="${producto.categoria}"></span></p>
+        <p><strong>Marca:</strong> <span th:text="${producto.marca}"></span></p>
+
+        <div class="separator"></div>
+
+        <a href="/formularioProducto">Regresar al formulario</a>
+    </div>
+
+</body>
+</html>
